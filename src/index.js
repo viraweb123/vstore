@@ -71,8 +71,17 @@ import BlogPage from './components/blogs/blog-page'
 
 
 class Root extends React.Component {
+	
 
 	render() {
+		// Load base href
+		var bases = document.getElementsByTagName('base');
+		var baseHref = '/';
+		if (bases.length > 0) {
+		    baseHref = bases[0].href;
+		}
+
+
 		store.dispatch(getAllProducts());
 		
 		// Remove loader from the view
@@ -84,7 +93,7 @@ class Root extends React.Component {
 		return (
 			<Provider store={store}>
 				<IntlProvider translations={translations} locale='en'>
-					<BrowserRouter basename={'/'} >
+					<BrowserRouter basename={ baseHref } >
 						<ScrollContext>
 							<Switch>
 								<Route exact path={`${process.env.PUBLIC_URL}/`} component={home} />
