@@ -74,6 +74,12 @@ class Root extends React.Component {
 
 	render() {
 		store.dispatch(getAllProducts());
+		
+		// Remove loader from the view
+		setTimeout(function() {
+			document.querySelector(".loader-wrapper").style = "display: none";
+		}, 2000);
+
 
 		return (
 			<Provider store={store}>

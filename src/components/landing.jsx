@@ -16,10 +16,6 @@ class Landing extends Component {
 
 	componentDidMount() {
 
-		setTimeout(function() {
-			document.querySelector(".loader-wrapper").style = "display: none";
-		}, 2000);
-
 		let sky = document.querySelector('#img-bg'),
 			elemOne = document.querySelector('#img-1'),
 			elemTwo = document.querySelector('#img-2'),
