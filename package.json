@@ -2,7 +2,7 @@
 	"name": "VStore",
 	"version": "0.1.0",
 	"private": false,
-	"homepage": "https://viraweb123.ir/",
+	"homepage": "./",
 	"basename": "/",
 	"dependencies": {
 		"@babel/core": "7.1.0",
