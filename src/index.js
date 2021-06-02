@@ -78,7 +78,7 @@ class Root extends React.Component {
 		var bases = document.getElementsByTagName('base');
 		var baseHref = '/';
 		if (bases.length > 0) {
-		    baseHref = bases[0].href;
+		    baseHref = bases[0].getAttribute('href');
 		}
 
 
