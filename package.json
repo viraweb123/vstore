@@ -67,7 +67,7 @@
 		"react-router-dom": "^4.3.1",
 		"react-router-scroll-4": "^1.0.0-beta.2",
 		"react-router-transition": "^2.0.0",
-		"react-scripts": "^2.1.8",
+		"react-scripts": "4.0.3",
 		"react-slick": "^0.21.0",
 		"react-slide-toggle": "^0.1.13",
 		"react-sticky-box": "^0.7.8",
@@ -82,6 +82,7 @@
 		"simple-react-validator": "^1.2.4",
 		"slick-carousel": "^1.8.1",
 		"smartmenus": "^1.1.0",
+		"source-map-explorer": "^2.5.2",
 		"style-loader": "0.23.0",
 		"terser-webpack-plugin": "1.1.0",
 		"url-loader": "1.1.1",
@@ -92,7 +93,8 @@
 	"scripts": {
 		"start": "node scripts/start.js",
 		"build": "node scripts/build.js",
-		"test": "node scripts/test.js"
+		"test": "node scripts/test.js",
+		"analysis": "source-map-explorer 'build/static/js/*.js'"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -149,5 +151,6 @@
 		"node-sass": "^4.13.0",
 		"sass-loader": "^7.3.1",
 		"webpack": "^4.41.2"
-	}
+	},
+	"proxy": "https://7tooti.com:443"
 }
