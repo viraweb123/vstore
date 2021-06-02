@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	useLocation
+} from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
 import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
 import './index.scss';
@@ -69,6 +74,17 @@ import Details from './components/blogs/details'
 import BlogPage from './components/blogs/blog-page'
 
 
+function NoMatch() {
+	let location = useLocation();
+
+	return (
+		<div>
+			<h3>
+				No match for <code>{location.pathname}</code>
+			</h3>
+		</div>
+	);
+}
 
 class Root extends React.Component {
 
@@ -99,37 +115,40 @@ class Root extends React.Component {
 					<BrowserRouter basename={baseHref} >
 						<ScrollContext>
 							<Switch>
-								<Route exact path={`${process.env.PUBLIC_URL}/`} component={home} />
+								<Route exact path={`/`} component={home} />
 								<Layout>
-									<Route path={`${process.env.PUBLIC_URL}/shop`} component={shop} />
-									<Route path={`${process.env.PUBLIC_URL}/product/:id`} component={product} />
+									<Route path={`/shop`} component={shop} />
+									<Route path={`/product/:id`} component={product} />
 
 									{/*Routes For custom Features*/}
-									<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} />
-									<Route path={`${process.env.PUBLIC_URL}/wishlist`} component={wishList} />
-									<Route path={`${process.env.PUBLIC_URL}/compare`} component={Compare} />
-									<Route path={`${process.env.PUBLIC_URL}/checkout`} component={checkOut} />
-									<Route path={`${process.env.PUBLIC_URL}/order-success`} component={orderSuccess} />
+									<Route path={`/cart`} component={Cart} />
+									<Route path={`/wishlist`} component={wishList} />
+									<Route path={`/compare`} component={Compare} />
+									<Route path={`/checkout`} component={checkOut} />
+									<Route path={`/order-success`} component={orderSuccess} />
 
 									{/*Routes For Extra Pages*/}
-									<Route path={`${process.env.PUBLIC_URL}/pages/about-us`} component={aboutUs} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/404`} component={PageNotFound} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/lookbook`} component={lookbook} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/login`} component={Login} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/register`} component={Register} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/search`} component={Search} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/collection`} component={Collection} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/forget-password`} component={ForgetPassword} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/contact`} component={Contact} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/dashboard`} component={Dashboard} />
-									<Route path={`${process.env.PUBLIC_URL}/pages/faq`} component={Faq} />
+									<Route path={`/pages/about-us`} component={aboutUs} />
+									<Route path={`/pages/404`} component={PageNotFound} />
+									<Route path={`/pages/lookbook`} component={lookbook} />
+									<Route path={`/pages/login`} component={Login} />
+									<Route path={`/pages/register`} component={Register} />
+									<Route path={`/pages/search`} component={Search} />
+									<Route path={`/pages/collection`} component={Collection} />
+									<Route path={`/pages/forget-password`} component={ForgetPassword} />
+									<Route path={`/pages/contact`} component={Contact} />
+									<Route path={`/pages/dashboard`} component={Dashboard} />
+									<Route path={`/pages/faq`} component={Faq} />
 
 									{/*Blog Pages*/}
-									<Route path={`${process.env.PUBLIC_URL}/blog/right-sidebar`} component={RightSide} />
-									<Route path={`${process.env.PUBLIC_URL}/blog/details`} component={Details} />
-									<Route path={`${process.env.PUBLIC_URL}/blog/blog-page`} component={BlogPage} />
+									<Route path={`/blog/right-sidebar`} component={RightSide} />
+									<Route path={`/blog/details`} component={Details} />
+									<Route path={`/blog/blog-page`} component={BlogPage} />
 
 									{/* <Route exact path="*" component={PageNotFound} /> */}
+									<Route path="*">
+										<NoMatch />
+									</Route>
 								</Layout>
 							</Switch>
 						</ScrollContext>

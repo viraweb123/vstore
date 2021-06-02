@@ -1371,7 +1371,7 @@ header {
     height: 75vh;
     @for $i from 1 through 56 {
       &.home#{$i} {
-        background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
+        background-image:url("https://dummyimage.com/1920x718/ccBBcc/0011ff.png");
       }
     }
   }
@@ -3271,7 +3271,7 @@ header {
   background-position: center;
   @for $i from 1 through 28 {
     &.parallax-banner#{$i} {
-      background-image:url("#{$assetspath}/parallax/#{$i}.jpg");
+      background-image:url("https://dummyimage.com/1920x1080/cccccc/0011ff.png");
     }
   }
   &.parallax-layout {

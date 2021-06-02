@@ -17,7 +17,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-center">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`}
+                                            <img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner">
@@ -33,7 +33,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-center">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`}
+                                            <img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner">

@@ -78,7 +78,7 @@ class Fashion extends Component {
                             <div className="col-md-6">
                                 <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
                                     <div className="collection-banner p-right text-center">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`} className="img-fluid" alt=""/>
                                             <div className="contain-banner">
                                                 <div>
                                                     <h4>save 30%</h4>
@@ -91,7 +91,7 @@ class Fashion extends Component {
                             <div className="col-md-6">
                                 <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
                                     <div className="collection-banner p-right text-center">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`} className="img-fluid" alt=""/>
                                             <div className="contain-banner">
                                                 <div>
                                                     <h4>save 60%</h4>
