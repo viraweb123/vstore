@@ -71,19 +71,22 @@ import BlogPage from './components/blogs/blog-page'
 
 
 class Root extends React.Component {
-	
+
 
 	render() {
 		// Load base href
 		var bases = document.getElementsByTagName('base');
 		var baseHref = '/';
 		if (bases.length > 0) {
-		    baseHref = bases[0].getAttribute('href');
+			baseHref = bases[0].getAttribute('href');
+		}
+		if (baseHref.endsWith("/") && baseHref.length > 1) {
+			baseHref = baseHref.substring(0, baseHref.length - 1);
 		}
 
 
 		store.dispatch(getAllProducts());
-		
+
 		// Remove loader from the view
 		setTimeout(function() {
 			document.querySelector(".loader-wrapper").style = "display: none";
@@ -93,14 +96,14 @@ class Root extends React.Component {
 		return (
 			<Provider store={store}>
 				<IntlProvider translations={translations} locale='en'>
-					<BrowserRouter basename={ baseHref } >
+					<BrowserRouter basename={baseHref} >
 						<ScrollContext>
 							<Switch>
 								<Route exact path={`${process.env.PUBLIC_URL}/`} component={home} />
 								<Layout>
 									<Route path={`${process.env.PUBLIC_URL}/shop`} component={shop} />
 									<Route path={`${process.env.PUBLIC_URL}/product/:id`} component={product} />
-									
+
 									{/*Routes For custom Features*/}
 									<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} />
 									<Route path={`${process.env.PUBLIC_URL}/wishlist`} component={wishList} />
