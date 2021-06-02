@@ -16,7 +16,7 @@ class BlogSection extends Component {
                                     <div className="col-md-12">
                                         <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
                                             <div className="classic-effect">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`} className="img-fluid" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
                                                     <span></span>
                                             </div>
                                         </Link>
@@ -33,7 +33,7 @@ class BlogSection extends Component {
                                     <div className="col-md-12">
                                         <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
                                             <div className="classic-effect">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`} className="img-fluid" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
                                                     <span></span>
                                             </div>
                                         </Link>
@@ -50,7 +50,7 @@ class BlogSection extends Component {
                                     <div className="col-md-12">
                                         <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
                                             <div className="classic-effect">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/3.jpg`} className="img-fluid" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
                                                     <span></span>
                                             </div>
                                         </Link>
@@ -66,7 +66,7 @@ class BlogSection extends Component {
                                     <div className="col-md-12">
                                     <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
                                         <div className="classic-effect">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/blog/4.jpg`} className="img-fluid" alt="" />
+                                            <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
                                                 <span></span>
                                         </div>
                                     </Link>
@@ -82,7 +82,7 @@ class BlogSection extends Component {
                                     <div className="col-md-12">
                                         <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
                                             <div className="classic-effect">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/5.jpg`} className="img-fluid" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
                                                     <span></span>
                                             </div>
                                         </Link>

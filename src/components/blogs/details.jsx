@@ -67,10 +67,10 @@ class BlogDetails extends Component {
                         </div>
                         <div className="row section-b-space blog-advance">
                             <div className="col-lg-6">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`} className="img-fluid" alt=""/>
+                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt=""/>
                             </div>
                             <div className="col-lg-6">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`} className="img-fluid" alt=""/>
+                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt=""/>
                             </div>
                             <div className="col-lg-6">
                                 <ul>

@@ -26,7 +26,7 @@ class BlogPage extends Component {
                                         <ul className="recent-blog">
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`}
+                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -36,7 +36,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`}
+                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -46,7 +46,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/3.jpg`}
+                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -56,7 +56,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/4.jpg`}
+                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -66,7 +66,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/5.jpg`}
+                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -141,7 +141,7 @@ class BlogPage extends Component {
                                     <div className="col-xl-6">
                                         <div className="blog-left">
                                             <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`} className="img-fluid" alt=""/>
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt=""/>
                                             </Link>
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@ class BlogPage extends Component {
                                     <div className="col-xl-6">
                                         <div className="blog-left">
                                             <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`} className="img-fluid"
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@ class BlogPage extends Component {
                                 <div className="row blog-media">
                                     <div className="col-xl-6">
                                         <div className="blog-left">
-                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} ><img src={`${process.env.PUBLIC_URL}/assets/images/blog/3.jpg`} className="img-fluid"
+                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} ><img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@ class BlogPage extends Component {
                                     <div className="col-xl-6">
                                         <div className="blog-left">
                                             <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/4.jpg`} className="img-fluid"
+                                                <img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
