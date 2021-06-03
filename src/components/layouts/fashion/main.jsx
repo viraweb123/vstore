@@ -24,6 +24,17 @@ class Fashion extends Component {
     }
 
 	render() {
+		let slides = [{
+			title: 'men fashion',
+			subtitle: 'welcome to fashion',
+			link: '/shop',
+			linkTitle: 'shop now'
+		},{
+			title: 'women fashion',
+			subtitle: 'welcome to fashion',
+			link: '/shop',
+			linkTitle: 'shop now'
+		}];
 		return (
 			<div>
                 <Helmet>
@@ -33,40 +44,25 @@ class Fashion extends Component {
                 {/*Home Slider*/}
                 <section className="p-0">
                     <Slider  className="slide-1 home-slider">
-                        <div>
-                            <div className="home home1 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    <h4>welcome to fashion</h4>
-                                                    <h1>men fashion</h1>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home2 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    <h4>welcome to fashion</h4>
-                                                    <h1>women fashion</h1>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {slides.map(function(slide){ 
+								return (<div>
+		                            <div className="home home1 text-center">
+		                                <div className="container">
+		                                    <div className="row">
+		                                        <div className="col">
+		                                            <div className="slider-contain">
+		                                                <div>
+		                                                    <h4>{slide.subtitle}</h4>
+		                                                    <h1>{slide.title}</h1>
+		                                                    <Link to={slide.link} className="btn btn-solid">{slide.linkTitle}</Link>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+							);})};
                     </Slider>
                 </section>
                 {/*Home Section End*/}
