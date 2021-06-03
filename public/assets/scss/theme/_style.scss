@@ -1369,11 +1369,12 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     height: 75vh;
-    @for $i from 1 through 56 {
-      &.home#{$i} {
-        background-image:url("https://dummyimage.com/1920x718/ccBBcc/0011ff.png");
-      }
-    }
+// Background must set from code
+//    @for $i from 1 through 56 {
+//      &.home#{$i} {
+//        background-image:url("https://dummyimage.com/1920x718/ccBBcc/0011ff.png");
+//      }
+//    }
   }
 
   .slider-contain {
