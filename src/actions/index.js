@@ -24,7 +24,7 @@ export const getAllProducts = () => dispatch => {
 	dispatch(fetchProductsBegin());
 	shop.getProducts(products => {
 		dispatch(receiveProducts(products));
-		return products;
+		//return products;
 	})
 }
 export const fetchSingleProduct = productId => ({
