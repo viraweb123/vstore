@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
-import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
+import { 
+	IntlReducer as Intl, 
+	IntlProvider 
+} from 'react-redux-multilingual';
 
 // Import custom components
 import productReducer from './products';
@@ -10,12 +13,12 @@ import compareReducer from './compare';
 
 
 const rootReducer = combineReducers({
-    data: productReducer,
-    cartList: cartReducer,
-    filters: filtersReducer,
-    wishlist: wishlistReducer,
-    compare: compareReducer,
-    Intl
+	data: productReducer,
+	cartList: cartReducer,
+	filters: filtersReducer,
+	wishlist: wishlistReducer,
+	compare: compareReducer,
+	Intl
 });
 
 export default rootReducer;
