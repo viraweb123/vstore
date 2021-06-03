@@ -45,7 +45,8 @@ class Fashion extends Component {
                 <section className="p-0">
                     <Slider  className="slide-1 home-slider">
                         {slides.map(function(slide){ 
-								return (<div>
+								return (
+								<div>
 		                            <div className="home home1 text-center">
 		                                <div className="container">
 		                                    <div className="row">
@@ -62,7 +63,8 @@ class Fashion extends Component {
 		                                </div>
 		                            </div>
 		                        </div>
-							);})};
+							);
+							})}
                     </Slider>
                 </section>
                 {/*Home Section End*/}
