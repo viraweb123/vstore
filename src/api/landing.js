@@ -1,162 +1,37 @@
 
-// Grid Columns Photos
 
-export const photos = [
-    {
-      src: require('../assets/images/portfolio/grid/1.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/2.jpg'),
-      type: 'shoes'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/3.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/4.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/5.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/6.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/7.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/8.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/9.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/10.jpg'),
-      type: 'shoes'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/11.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/grid/12.jpg'),
-      type: 'bags'
-    },
-  ]
+export function getSlides() {
+	return [{
+		title: 'men fashion',
+		subtitle: 'welcome to fashion',
+		link: '/shop',
+		linkTitle: 'shop now',
+		image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'
+	}, {
+		title: 'women fashion',
+		subtitle: 'welcome to fashion',
+		link: '/shop',
+		linkTitle: 'shop now',
+		image: 'https://images.ctfassets.net/hrltx12pl8hq/oZL5bg7l1t7ZvXxpe6OBe/337244daf1cb2f4420806a40aee81df1/shutterstock_image__9_-min.jpg?fit=fill&w=800&h=300'
+	}];
+};
 
-  // Masonary Photos
-
-  export const MasonaryPhotos = [
-    {
-      src: require('../assets/images/portfolio/1.jpg'),
-      type: 'shoes'
-    },
-    {
-      src: require('../assets/images/portfolio/2.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/3.jpg'),
-      type: 'shoes'
-    },
-    {
-      src: require('../assets/images/portfolio/4.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/5.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/6.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/7.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/8.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/9.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/10.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/11.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/12.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/13.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/14.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/15.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/16.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/17.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/18.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/19.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/20.jpg'),
-      type: 'watch'
-    },
-    {
-      src: require('../assets/images/portfolio/21.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/22.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/23.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/24.jpg'),
-      type: 'bags'
-    },
-    {
-      src: require('../assets/images/portfolio/25.jpg'),
-      type: 'fashion'
-    },
-    {
-      src: require('../assets/images/portfolio/26.jpg'),
-      type: 'fashion'
-    },
-  ]
+export function getMainCategories() {
+	// REST: GET: /api/v2/shop/categories?_px_fk=parent_id&_px_fv=0
+	return [{
+		id: 87,
+		name: 'الأعلام الدينية',
+		thumbnail: "/api/v2/cms/contents/5472/content"
+	},
+	{
+		id: 375,
+		description: "يافطات دينية حسب المناسبات اﻹسلامية",
+		name: "الیافطات",
+		thumbnail: "/api/v2/cms/contents/7159/content"
+	}, {
+		id: 84,
+		description: "الملابس الدينية",
+		name: "ملابس",
+		thumbnail: "/api/v2/cms/contents/5469/content"
+	}];
+};
