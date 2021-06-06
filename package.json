@@ -63,7 +63,7 @@
 		"react-router-scroll-4": "^1.0.0-beta.2",
 		"react-router-transition": "^2.0.0",
 		"react-scripts": "4.0.3",
-		"react-slick": "^0.21.0",
+		"react-slick": "^0.28.1",
 		"react-slide-toggle": "^0.1.13",
 		"react-sticky-box": "^0.7.8",
 		"react-tabs": "^2.3.1",
