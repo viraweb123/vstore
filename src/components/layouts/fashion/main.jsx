@@ -15,26 +15,24 @@ import {
 	svgservice,
 	svgoffer
 } from "../../../services/script"
+import * as landingApi from "../../../api/landing";
 
 
 class Fashion extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			slides: landingApi.getSlides(),
+			mainCategories: landingApi.getMainCategories()
+		};
+	}
 
 	componentDidMount() {
 		document.getElementById("color").setAttribute("href", `#`);
 	}
 
 	render() {
-		let slides = [{
-			title: 'men fashion',
-			subtitle: 'welcome to fashion',
-			link: '/shop',
-			linkTitle: 'shop now'
-		}, {
-			title: 'women fashion',
-			subtitle: 'welcome to fashion',
-			link: '/shop',
-			linkTitle: 'shop now'
-		}];
 		return (
 			<div>
 				<Helmet>
@@ -44,10 +42,11 @@ class Fashion extends Component {
 				{/*Home Slider*/}
 				<section className="p-0">
 					<Slider className="slide-1 home-slider">
-						{slides.map(function(slide) {
+						{this.state.slides.map(function(slide) {
+							var slideStyle = { backgroundImage: `url(/imgx/${slide.image}?w=1920&h=718)` };
 							return (
 								<div>
-									<div className="home home1 text-center">
+									<div className="home home1 text-center" style={slideStyle}>
 										<div className="container">
 											<div className="row">
 												<div className="col">
@@ -73,32 +72,23 @@ class Fashion extends Component {
 				<section className="pb-0">
 					<div className="container">
 						<div className="row partition2">
-							<div className="col-md-6">
-								<Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
-									<div className="collection-banner p-right text-center">
-										<img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`} className="img-fluid" alt="" />
-										<div className="contain-banner">
-											<div>
-												<h4>save 30%</h4>
-												<h2>men</h2>
+							{
+								this.state.mainCategories.map(cat =>
+									<div className="col-md-6">
+										<Link to='/shop'>
+											<div className="collection-banner p-right text-center">
+												<img src={'/imgx/' + cat.thumbnail + '?w=642&h=310&f=cover'} className="img-fluid" alt={cat.name} />
+												<div className="contain-banner">
+													<div>
+														<h4>{cat.description}</h4>
+														<h2>{cat.name}</h2>
+													</div>
+												</div>
 											</div>
-										</div>
+										</Link>
 									</div>
-								</Link>
-							</div>
-							<div className="col-md-6">
-								<Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
-									<div className="collection-banner p-right text-center">
-										<img src={`https://dummyimage.com/672x310/cccccc/0011ff.png`} className="img-fluid" alt="" />
-										<div className="contain-banner">
-											<div>
-												<h4>save 60%</h4>
-												<h2>women</h2>
-											</div>
-										</div>
-									</div>
-								</Link>
-							</div>
+								)
+							}
 						</div>
 					</div>
 				</section>
