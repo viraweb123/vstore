@@ -1,4 +1,5 @@
-import shop from '../api/shop'
+// import shop from '../api/shop'
+import shop from '../api/shop-pluf'
 import * as types from '../constants/ActionTypes'
 //import store from "../store";
 import { toast } from 'react-toastify';

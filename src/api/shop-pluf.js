@@ -62,18 +62,19 @@ function encodeQueryParams(params) {
 }
 
 function mapProducts(products) {
-
+	return [];
 }
 
 function getProducts(cb) {
 	// encode to scape spaces
 	const url = '/api/v2/shop/products?';
 	const params = {
-		graphql: '{' +
+		graphql: '{items{' +
 			'id,title,description,brand,model,manufacturer,avatar,price,off,' +
 			'categories{id, name},' +
-			'metafields{id, key, namespace, product_id, unit, value}' +
-			'}',
+			'metafields{id, key, namespace, product_id, unit, value},' +
+			'tags{id, name}' +
+			'}}',
 	};
 
 
