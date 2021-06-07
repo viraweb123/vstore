@@ -36,6 +36,13 @@ function getProductMetaField(product, key, namespace) {
 	}
 }
 
+function getFirstCategoryName(categories){
+	if((!categories || !Array.isArray(categories) || categories.length < 1)){
+		return 'empty';
+	}
+	return categories[0].name;
+}
+
 function aggregateObjectField(list, key) {
 	var result = [];
 	list.forEach(item => {
@@ -62,7 +69,7 @@ function mapProducts(products) {
 		product.sale = getProductMetaField(product, 'vstore.sale', 'theme') || 0;
 		product.sale = getProductMetaField(product, 'rating', 'community') || 0;
 		product.tags = aggregateObjectField(product.tags, 'name');
-		product.category = aggregateObjectField(product.categories, 'name');
+		product.category = getFirstCategoryName(product.categories);
 
 		variant.forEach(item => {
 			item.images = item.image;
