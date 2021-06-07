@@ -60,7 +60,7 @@ function mapProducts(products) {
 		product.salePrice = product.price - (product.off || 0);
 		product.discount = (product.off || 0) * 100 / product.price;
 
-		let variant = JSON.parse(getProductMetaField(product, 'variant', 'theme') || '[]');
+		let variant = JSON.parse(getProductMetaField(product, 'variant') || '[]');
 		product.variants = variant;
 		product.pictures = aggregateObjectField(variant, 'image');
 		product.colors = aggregateObjectField(variant, 'color');
