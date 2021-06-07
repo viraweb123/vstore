@@ -71,7 +71,7 @@ function mapProducts(products) {
 	return products;
 }
 
-function getProducts(cb) {
+function getProducts(cb, timeout) {
 	// encode to scape spaces
 	const url = '/api/v2/shop/products?';
 	const params = {
