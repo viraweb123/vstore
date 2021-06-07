@@ -73,7 +73,7 @@ function mapProducts(products) {
 
 		variant.forEach(item => {
 			item.images = item.image;
-		})
+		});
 	});
 	return products;
 }
