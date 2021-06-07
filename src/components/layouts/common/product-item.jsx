@@ -61,14 +61,14 @@ class ProductItem extends Component {
 
                         </div>
                         <div className="front">
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} ><img
-                                src={`${
+                            <Link to={`/product/${product.id}`} ><img
+                                src={`/imgx${
                                     product.variants?
                                         this.state.image?this.state.image:product.variants[0].images
                                         :product.pictures[0]
-                                    }`}
+                                    }?w=736&h=1000`}
                                 className="img-fluid"
-                                alt="" /></Link>
+                                alt={`${product.name}`} /></Link>
                         </div>
                         <div className="cart-info cart-wrap">
                             <button title="Add to cart" onClick={onAddToCartClicked}>
@@ -81,7 +81,7 @@ class ProductItem extends Component {
                                data-target="#quick-view"
                                title="Quick View"
                                onClick={this.onOpenModal}><i className="fa fa-search" aria-hidden="true"></i></a>
-                            <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
+                            <Link to={`/compare`} title="Compare" onClick={onAddToCompareClicked}>
                                 <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                         </div>
                         {product.variants?
@@ -100,7 +100,7 @@ class ProductItem extends Component {
                             <div className="rating">
                                 {RatingStars}
                             </div>
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
+                            <Link to={`/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>
                             <h4>{symbol}{product.price-(product.price*product.discount/100)}
@@ -122,11 +122,11 @@ class ProductItem extends Component {
                                     <div className="row">
                                         <div className="col-lg-6  col-xs-12">
                                             <div className="quick-view-img">
-                                                <img src={`${
+                                                <img src={`/imgx${
                                                     product.variants?
                                                         this.state.image?this.state.image:product.variants[0].images
                                                         :product.pictures[0]
-                                                    }`} alt="" className="img-fluid" />
+                                                    }?w=736&h=1000`} alt="" className="img-fluid" />
                                             </div>
                                         </div>
                                         <div className="col-lg-6 rtl-text">
@@ -171,7 +171,7 @@ class ProductItem extends Component {
                                                 </div>
                                                 <div className="product-buttons">
                                                     <button  className="btn btn-solid" onClick={() => onAddToCartClicked(product, this.state.quantity)} >add to cart</button>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} className="btn btn-solid">view detail</Link>
+                                                    <Link to={`/product/${product.id}`} className="btn btn-solid">view detail</Link>
                                                 </div>
                                             </div>
                                         </div>

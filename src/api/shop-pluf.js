@@ -1,7 +1,5 @@
-/**
- * Mocking client-server processing
- */
 
+import {toBoolean} from '../services/util'
 
 //{
 //		"category": "women",
@@ -66,8 +64,8 @@ function mapProducts(products) {
 		product.colors = aggregateObjectField(variant, 'color');
 		product.size = aggregateObjectField(variant, 'size');
 		product.stock = getProductMetaField(product, 'vstore.stock', 'theme') || 0;
-		product.new = getProductMetaField(product, 'vstore.new', 'theme') || 0;
-		product.sale = getProductMetaField(product, 'vstore.sale', 'theme') || 0;
+		product.new = toBoolean(getProductMetaField(product, 'vstore.new', 'theme'));
+		product.sale = toBoolean(getProductMetaField(product, 'vstore.sale', 'theme'));
 		product.rating = getProductMetaField(product, 'rating', 'community') || 0;
 		product.tags = aggregateObjectField(product.tags, 'name');
 		product.category = getFirstCategoryName(product.categories);
