@@ -51,14 +51,23 @@ export function aggregateObjectField(list, key) {
 	return result;
 }
 
+function metafieldToMap(product){
+	var metaMap = {};
+	product.metafields.forEach((meta) => {
+		metaMap[meta.key] = meta.value;
+	});
+	return metaMap;
+}
+
 function mapProducts(products) {
 	products.forEach(product => {
 		product.name = product.title;
 		product.shortDetails = product.description;
 		product.salePrice = product.price - (product.off || 0);
-		product.discount = (product.off || 0) * 100 / product.price;
+		product.discount = Math.round((product.off || 0) * 100 / product.price * 100) / 100;
 
 		let variant = JSON.parse(getProductMetaField(product, 'variant') || '[]');
+		variant.unshift(metafieldToMap(product));
 		product.variants = variant;
 		product.pictures = aggregateObjectField(variant, 'image');
 		product.colors = aggregateObjectField(variant, 'color');

@@ -57,3 +57,4 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 export default connect(mapStateToProps, {addToCart, addToWishlist, addToCompare}) (TopCollection);
+
