@@ -43,13 +43,14 @@ function getFirstCategoryName(categories){
 	return categories[0].name;
 }
 
-function aggregateObjectField(list, key) {
+export function aggregateObjectField(list, key) {
 	var result = [];
 	list.forEach(item => {
 		if (item[key]) {
 			result.push(item[key]);
 		}
-	})
+	});
+	return result;
 }
 
 function mapProducts(products) {
