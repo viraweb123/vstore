@@ -49,7 +49,7 @@ function aggregateObjectField(list, key) {
 		if (item[key]) {
 			result.push(item[key]);
 		}
-	})
+	});
 }
 
 function mapProducts(products) {
@@ -61,13 +61,13 @@ function mapProducts(products) {
 
 		let variant = JSON.parse(getProductMetaField(product, 'variant', 'theme') || '[]');
 		product.variants = variant;
-		product.puctures = aggregateObjectField(variant, 'image');
+		product.pictures = aggregateObjectField(variant, 'image');
 		product.colors = aggregateObjectField(variant, 'color');
 		product.size = aggregateObjectField(variant, 'size');
 		product.stock = getProductMetaField(product, 'vstore.stock', 'theme') || 0;
 		product.new = getProductMetaField(product, 'vstore.new', 'theme') || 0;
 		product.sale = getProductMetaField(product, 'vstore.sale', 'theme') || 0;
-		product.sale = getProductMetaField(product, 'rating', 'community') || 0;
+		product.rating = getProductMetaField(product, 'rating', 'community') || 0;
 		product.tags = aggregateObjectField(product.tags, 'name');
 		product.category = getFirstCategoryName(product.categories);
 
