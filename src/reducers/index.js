@@ -10,6 +10,7 @@ import cartReducer from './cart';
 import filtersReducer from './filters';
 import wishlistReducer from './wishlist';
 import compareReducer from './compare';
+import tenantReducer from './tenant';
 
 
 const rootReducer = combineReducers({
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
 	filters: filtersReducer,
 	wishlist: wishlistReducer,
 	compare: compareReducer,
+	tenant: tenantReducer,
 	Intl
 });
 

@@ -159,3 +159,4 @@ export default connect(
     mapStateToProps,
     {removeFromCart, incrementQty, decrementQty}
 )(cartComponent)
+
