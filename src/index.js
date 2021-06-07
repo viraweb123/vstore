@@ -74,20 +74,8 @@ import Details from './components/blogs/details'
 import BlogPage from './components/blogs/blog-page'
 
 
-function NoMatch() {
-	let location = useLocation();
-
-	return (
-		<div>
-			<h3>
-				No match for <code>{location.pathname}</code>
-			</h3>
-		</div>
-	);
-}
 
 class Root extends React.Component {
-
 
 	render() {
 		// Load base href
@@ -115,8 +103,8 @@ class Root extends React.Component {
 					<BrowserRouter basename={baseHref} >
 						<ScrollContext>
 							<Switch>
-								<Route exact path={`/`} component={home} />
 								<Layout>
+									<Route exact path={`/`} component={home} />
 									<Route path={`/shop`} component={shop} />
 									<Route path={`/product/:id`} component={product} />
 
@@ -145,10 +133,7 @@ class Root extends React.Component {
 									<Route path={`/blog/details`} component={Details} />
 									<Route path={`/blog/blog-page`} component={BlogPage} />
 
-									{/* <Route exact path="*" component={PageNotFound} /> */}
-									<Route path="*">
-										<NoMatch />
-									</Route>
+									{/* <Route exact path="*" component={NoMatch} /> */}
 								</Layout>
 							</Switch>
 						</ScrollContext>

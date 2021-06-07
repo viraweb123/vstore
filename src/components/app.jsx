@@ -1,14 +1,26 @@
 import React, {Component} from 'react';
-import { withTranslate } from 'react-redux-multilingual'
+import {
+	 withTranslate 
+} from 'react-redux-multilingual'
 
 // Custom Components
-import HeaderOne from './common/headers/header-one';
-import HeaderTwo from './common/headers/header-two';
-import HeaderThree from './common/headers/header-three';
+/**
+All Headers:
 
-import FooterOne from "./common/footers/footer-one";
-import FooterTwo from "./common/footers/footer-two";
-import FooterThree from "./common/footers/footer-three";
+- header-one
+- header-two
+- header-tree
+ */
+import Header from './common/headers/header-one';
+
+/**
+All footers:
+
+- footer-one
+- footer-two
+- footer-three
+ */
+import Footer from "./common/footers/footer-one";
 
 // ThemeSettings
 import ThemeSettings from "./common/theme-settings"
@@ -20,15 +32,17 @@ class App extends Component {
     render() {
         return (
             <div>
-                <HeaderOne logoName={'logo.png'}/>
+                <Header logoName={'logo.png'}/>
                 {this.props.children}
-                <FooterOne logoName={'logo.png'}/>
+                <Footer logoName={'logo.png'}/>
 
                 <ThemeSettings />
-
             </div>
         );
     }
 }
 
+/*
+Translate the application
+ */
 export default withTranslate(App);
