@@ -3270,11 +3270,6 @@ header {
   padding-top: 190px;
   padding-bottom: 190px;
   background-position: center;
-  @for $i from 1 through 28 {
-    &.parallax-banner#{$i} {
-      background-image:url("https://dummyimage.com/1920x1080/cccccc/0011ff.png");
-    }
-  }
   &.parallax-layout {
     padding-top: 350px;
     padding-bottom: 350px;

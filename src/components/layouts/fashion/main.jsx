@@ -16,6 +16,7 @@ import {
 	svgoffer
 } from "../../../services/script"
 import * as landingApi from "../../../api/landing";
+import { connect } from 'react-redux'
 
 
 class Fashion extends Component {
@@ -33,6 +34,9 @@ class Fashion extends Component {
 	}
 
 	render() {
+		const {parallax} = this.props;
+		
+		
 		return (
 			<div>
 				<Helmet>
@@ -98,14 +102,18 @@ class Fashion extends Component {
 
 				{/*Parallax banner*/}
 				<section className="p-0">
-					<div className="full-banner parallax-banner1 parallax text-center p-left">
+					<div 
+						style={{
+      						backgroundImage:`url("${parallax.banner}")`
+						}}
+						className="full-banner parallax-banner1 parallax text-center p-left">
 						<div className="container">
 							<div className="row">
 								<div className="col">
 									<div className="banner-contain">
-										<h2>2018</h2>
-										<h3>fashion trends</h3>
-										<h4>special offer</h4>
+										<h2>{parallax.title}</h2>
+										<h3>{parallax.subtitle}</h3>
+										<h4>{parallax.description}</h4>
 									</div>
 								</div>
 							</div>
@@ -181,4 +189,16 @@ class Fashion extends Component {
 	}
 }
 
-export default Fashion;
+
+const mapStateToProps = (state) => {
+	return {
+		parallax: state.parallax[0],
+	};
+}
+
+export default connect(mapStateToProps, {})(Fashion);
+
+
+
+
+
