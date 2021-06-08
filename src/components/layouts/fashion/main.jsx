@@ -46,7 +46,7 @@ class Fashion extends Component {
 				{/*Home Slider*/}
 				<section className="p-0">
 					<Slider className="slide-1 home-slider">
-						{this.state.slides.map(function(slide) {
+						{this.state.slides.map(slide => {
 							var slideStyle = { backgroundImage: `url(/imgx/${slide.image}?w=1920&h=718)` };
 							return (
 								<div>

@@ -11,7 +11,8 @@ import filtersReducer from './filters';
 import wishlistReducer from './wishlist';
 import compareReducer from './compare';
 import tenantReducer from './tenant';
-import parallaxReducer from './parallax'
+import parallaxReducer from './parallax';
+import blogPostsReducer from './blogPost';
 
 
 const rootReducer = combineReducers({
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
 	compare: compareReducer,
 	tenant: tenantReducer,
 	parallax: parallaxReducer,
+	blogPosts: blogPostsReducer,
 	Intl
 });
 
