@@ -15,7 +15,6 @@ class TopBar extends Component {
 							<div className="header-contact">
 								<ul>
 									<li>{translate('topbar_title', { title: title })}</li>
-									<li>{title}</li>
 									<li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  {phone}</li>
 								</ul>
 							</div>
