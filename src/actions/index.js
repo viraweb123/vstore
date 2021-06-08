@@ -135,3 +135,8 @@ export const changeCurrency = (symbol) => ({
 	symbol
 });
 
+// Tenant Setting
+export const loadTenantSettings = (settings) => ({
+	type: types.TENANT_SETTING_UPDATE,
+	settings
+});
