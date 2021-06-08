@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 class TopBar extends Component {
 
 	render() {
-		const { title, translate } = this.props;
+		const { title, phone, translate } = this.props;
 		return (
 			<div className="top-header">
 				<div className="container">
@@ -16,7 +16,7 @@ class TopBar extends Component {
 								<ul>
 									<li>{translate('topbar_title', { title: title })}</li>
 									<li>{title}</li>
-									<li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  123 - 456 - 7890</li>
+									<li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  {phone}</li>
 								</ul>
 							</div>
 						</div>
@@ -28,10 +28,10 @@ class TopBar extends Component {
 									<i className="fa fa-user" aria-hidden="true"></i> {translate('my_account')}
 									<ul className="onhover-show-div">
 										<li>
-											<Link to={`${process.env.PUBLIC_URL}/pages/login`} data-lng="en">Login</Link>
+											<Link to={`/pages/login`} data-lng="en">Login</Link>
 										</li>
 										<li>
-											<Link to={`${process.env.PUBLIC_URL}/pages/register`} data-lng="en">Register</Link>
+											<Link to={`/pages/register`} data-lng="en">Register</Link>
 										</li>
 									</ul>
 								</li>
@@ -50,7 +50,8 @@ class TopBar extends Component {
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		title: state.tenant.settings.title,
+		title: state.tenant.settings['shop.title'],
+		phone: state.tenant.settings['shop.phone'],
 		translate: ownProps.translate
 	};
 }
