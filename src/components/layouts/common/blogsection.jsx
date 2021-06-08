@@ -48,7 +48,7 @@ class BlogSection extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		posts: state.blogPosts,
+		posts: state,
 	};
 }
 

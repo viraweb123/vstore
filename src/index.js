@@ -19,7 +19,8 @@ import store from './store';
 import translations from './constants/translations'
 import {
 	getAllProducts,
-	loadTenantSettings
+	loadTenantSettings,
+	getLatestPosts
 } from './actions'
 // import Landing from './components/landing'
 
@@ -101,6 +102,7 @@ class Root extends React.Component {
 				dispatch(loadTenantSettings(items));
 			});
 		});
+		store.dispatch(getLatestPosts());
 
 		// Remove loader from the view
 		setTimeout(function() {

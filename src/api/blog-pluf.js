@@ -5,16 +5,27 @@ function encodeQueryParams(params) {
 	return Object.keys(params).map(k => `${esc(k)}=${esc(params[k])}`).join('&')
 }
 
+function getPostMeta(post, key) {
+	var metas = post.metas;
+	var found;
+	for(var i=0; i<metas.length; i++){
+		if(metas[i].key === key){
+			found = metas[i];
+			break;
+		}
+	}
+	if (found) {
+		return found.value;
+	}
+}
+
 function mapPosts(posts) {
 	posts.forEach(post => {
-		post.name = product.title;
-		post.shortDetails = product.description;
-		post.salePrice = product.price - (product.off || 0);
-		post.discount = Math.round((product.off || 0) * 100 / product.price * 100) / 100;
-
-		let variant = JSON.parse(getProductMetaField(product, 'variant') || '[]');
-		variant.unshift(metafieldToMap(product));
-		post.variants = variant;
+		// link, cover, date, description, title, author
+		post.author = post.author.login;
+		post.date = post.creation_dtime;
+		post.cover = getPostMeta(post, 'link.cover');
+		post.link = getPostMeta(post, 'link.canonical');
 	});
 	return posts;
 }

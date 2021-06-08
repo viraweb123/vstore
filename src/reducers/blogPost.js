@@ -18,10 +18,7 @@ export default function reducer(state = initialState, action) {
 
 	switch (action.type) {
 		case RECEIVE_POSTS:
-			return {
-				...state,
-				posts: action.posts
-			};
+			return action.posts;
 		default:
 			return state;
 	}

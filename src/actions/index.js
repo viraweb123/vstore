@@ -1,5 +1,6 @@
 // import shop from '../api/shop'
 import shop from '../api/shop-pluf'
+import blog from '../api/blog-pluf'
 import * as types from '../constants/ActionTypes'
 //import store from "../store";
 import { toast } from 'react-toastify';
@@ -140,3 +141,16 @@ export const loadTenantSettings = (settings) => ({
 	type: types.TENANT_SETTING_UPDATE,
 	settings
 });
+
+// Blog posts
+export const receivePosts = posts => ({
+	type: types.RECEIVE_POSTS,
+	posts
+})
+
+export const getLatestPosts = () => dispatch => {
+	blog.getPosts(posts => {
+		dispatch(receivePosts(posts));
+		//return posts;
+	})
+}
