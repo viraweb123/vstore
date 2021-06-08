@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link} from 'react-router-dom';
+import { connect } from 'react-redux'
 
 import {SlideUpDown} from "../../../services/script"
 import LogoImage from "../headers/common/logo"
@@ -58,26 +59,28 @@ class FooterOne extends Component {
                                 </div>
                                 <div className="footer-contant">
                                     <div className="footer-logo">
-                                        <LogoImage logo={this.props.logoName} />
+                                        <LogoImage logo={`/imgx${this.props.logo}?h=34&f=contain`} />
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <p>{this.props.description} </p>
                                     <div className="footer-social">
                                         <ul>
-                                            <li>
-                                                <Link to={'https://www.facebook.com/'} ><i className="fa fa-facebook" aria-hidden="true"></i></Link>
+											<li style={{display: this.props.facebook ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.facebook} ><i className="fa fa-facebook" aria-hidden="true"></i></Link>
+                                            </li> 
+                                            <li style={{display: this.props.twitter ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.twitter}><i className="fa fa-twitter" aria-hidden="true"></i></Link>
                                             </li>
-                                            <li>
-                                                <Link to={'https://plus.google.com/'} ><i className="fa fa-google-plus" aria-hidden="true"></i></Link>
+                                            <li style={{display: this.props.instagram ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.instagram}><i className="fa fa-instagram" aria-hidden="true"></i></Link>
                                             </li>
-                                            <li>
-                                                <Link to={'https://twitter.com'}><i className="fa fa-twitter" aria-hidden="true"></i></Link>
+                                            <li style={{display: this.props.telegram ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.telegram}><i className="fa fa-telegram" aria-hidden="true"></i></Link>
                                             </li>
-                                            <li>
-                                                <Link to={'https://instagram.com'}><i className="fa fa-instagram" aria-hidden="true"></i></Link>
+											<li style={{display: this.props.youtube ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.youtube} ><i className="fa fa-youtube" aria-hidden="true"></i></Link>
                                             </li>
-                                            <li>
-                                                <Link to={'https://rss.com/'}><i className="fa fa-rss" aria-hidden="true"></i></Link>
+                                            <li style={{display: this.props.aparat ? 'inline-block' : 'none'}}>
+                                                <Link to={this.props.aparat}><i className="fa fa-aparat" aria-hidden="true"></i></Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -173,4 +176,21 @@ class FooterOne extends Component {
     }
 }
 
-export default FooterOne;
+//export default FooterOne;
+
+const mapStateToProps = (state, ownProps) => {
+	return {
+		title: state.tenant.settings['shop.title'],
+		logo: state.tenant.settings['shop.logo'],
+		description: state.tenant.settings['shop.description'],
+		facebook: state.tenant.settings['shop.social.facebook'],
+		instagram: state.tenant.settings['shop.social.instagram'],
+		telegram: state.tenant.settings['shop.social.telegram'],
+		twitter: state.tenant.settings['shop.social.twitter'],
+		youtube: state.tenant.settings['shop.social.youtube'],
+		aparat: state.tenant.settings['shop.social.aparat'],
+	};
+}
+
+export default connect(mapStateToProps, {})(FooterOne);
+
