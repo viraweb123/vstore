@@ -101,7 +101,7 @@ class HeaderOne extends Component {
 											<SideBar/>
 										</div>
 										<div className="brand-logo">
-											<LogoImage logo={this.props.logoName} />
+											<LogoImage logo={this.props.logo} />
 										</div>
 									</div>
 									<div className="menu-right pull-right">
@@ -170,6 +170,12 @@ class HeaderOne extends Component {
 	}
 }
 
-export default connect(null,
+const mapStateToProps = (state, ownProps) => {
+	return {
+		logo: state.tenant.settings['shop.logo']
+	};
+}
+
+export default connect(mapStateToProps,
     { changeCurrency }
 )(HeaderOne);
