@@ -1,24 +1,29 @@
 /**
 Blog Posts
 
-Lates post form the blog will be stored in the list.
+Latest post from the blog will be stored in the list.
 
-Just load and update the store to show new list of blogs.
+Just load and update the store to show new list of blog posts.
 
  */
 
-//import {
-//	TENANT_SETTING_CREATE,
-//	TENANT_SETTING_UPDATE,
-//	TENANT_SETTING_DELETE
-//} from "../constants/ActionTypes";
+import {
+	RECEIVE_POSTS
+} from "../constants/ActionTypes";
 
 
-const defaultState = [];
+const initialState = {
+	posts: []
+};
 
-export default function reducer(state = defaultState, action) {
+export default function reducer(state = initialState, action) {
 
 	switch (action.type) {
+		case RECEIVE_POSTS:
+			return {
+				...state,
+				posts: action.posts
+			};
 		default:
 			return state;
 	}
