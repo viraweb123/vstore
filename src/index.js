@@ -11,10 +11,16 @@ import { ScrollContext } from 'react-router-scroll-4';
 import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
 import './index.scss';
 
+// API
+import { getTenantSettings } from './api/tenant';
+
 // Import custom components
 import store from './store';
 import translations from './constants/translations'
-import { getAllProducts } from './actions'
+import {
+	getAllProducts,
+	loadTenantSettings
+} from './actions'
 // import Landing from './components/landing'
 
 
@@ -90,6 +96,11 @@ class Root extends React.Component {
 
 
 		store.dispatch(getAllProducts());
+		store.dispatch(dispatch => {
+			getTenantSettings((items) => {
+				dispatch(loadTenantSettings(items));
+			});
+		});
 
 		// Remove loader from the view
 		setTimeout(function() {
