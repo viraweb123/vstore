@@ -18,55 +18,12 @@ Load your data and set into the parallax store to update state of the applicatio
 
 
 const defaultState = [{
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
-}, {
-	link: '/blog/details',
-	cover: 'https://dummyimage.com/1000x591/cccccc/0011ff.png',
-	date: '25 January 2018',
-	description: 'Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,Lorem ipsum dolor sit consectetur adipiscing elit,',
-	title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-	author: 'John Dio , 2 Comment'
+	banner: '/api/v2/cms/contents/39030/content',
+	title: '2021',
+	subtitle: 'fashion trends',
+	description: 'special offer'
 }];
+
 
 export default function reducer(state = defaultState, action) {
 
