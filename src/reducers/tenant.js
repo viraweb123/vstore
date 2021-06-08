@@ -4,7 +4,9 @@ import {
 
 
 const defaultState = {
-	settings: [],
+	settings: {
+		title: 'Test title'
+	},
 };
 
 export default function cartReducer(state = defaultState, action) {
