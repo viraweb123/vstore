@@ -12,9 +12,7 @@ import {
 } from "../constants/ActionTypes";
 
 
-const initialState = {
-	posts: []
-};
+const initialState = [];
 
 export default function reducer(state = initialState, action) {
 

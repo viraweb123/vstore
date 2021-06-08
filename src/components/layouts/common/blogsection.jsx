@@ -13,7 +13,7 @@ class BlogSection extends Component {
 				<div className="row">
 					<div className="col-md-12">
 						<Slider {...Slider3} className="slide-3 no-arrow ">
-							{posts.forEach(post => {
+							{posts.map(post => 
 								<div>
 									<div className="col-md-12">
 										<Link to={post.link} >
@@ -36,7 +36,7 @@ class BlogSection extends Component {
 										</div>
 									</div>
 								</div>
-							})}
+							)}
 						</Slider>
 					</div>
 				</div>
