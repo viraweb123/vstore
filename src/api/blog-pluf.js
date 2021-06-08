@@ -39,7 +39,7 @@ function getPosts(callback, timeout) {
 		graphql: '{items{'+
 			'id,name,title,description,creation_dtime,modif_dtime,author{login},metas{key,value},' +
 			'term_taxonomies{taxonomy,count,term{name}}' +
-			+ '}}',
+			'}}',
 	};
 
 
