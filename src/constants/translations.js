@@ -2,7 +2,7 @@ var module = {
     fn: {
         locale: 'fn',
         messages: {
-            topbar_title: 'Bienvenue dans notre magasin {theme_name}',
+            topbar_title: 'Bienvenue dans notre magasin {title}',
             call_us: 'Appelez nous',
             home: 'maison',
             features: 'fonctionnalités',
