@@ -80,7 +80,7 @@ class FooterOne extends Component {
                                                 <Link to={this.props.youtube} ><i className="fa fa-youtube" aria-hidden="true"></i></Link>
                                             </li>
                                             <li style={{display: this.props.aparat ? 'inline-block' : 'none'}}>
-                                                <Link to={this.props.aparat}><i className="fa fa-aparat" aria-hidden="true"></i></Link>
+                                                <Link to={this.props.aparat}><i className="fa fa-video" aria-hidden="true"></i></Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -93,10 +93,10 @@ class FooterOne extends Component {
                                     </div>
                                     <div className="footer-contant">
                                         <ul>
-                                            <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >womens</Link></li>
-                                            <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >clothing</Link></li>
-                                            <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >accessories</Link></li>
-                                            <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >featured</Link></li>
+                                            <li><Link to={`/pages/collection`} >womens</Link></li>
+                                            <li><Link to={`/pages/collection`} >clothing</Link></li>
+                                            <li><Link to={`/pages/collection`} >accessories</Link></li>
+                                            <li><Link to={`/pages/collection`} >featured</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -124,12 +124,9 @@ class FooterOne extends Component {
                                     </div>
                                     <div className="footer-contant">
                                         <ul className="contact-list">
-                                            <li><i className="fa fa-map-marker"></i>Multikart Demo Store, Demo store
-                                                India 345-659
-                                            </li>
-                                            <li><i className="fa fa-phone"></i>Call Us: 123-456-7898</li>
-                                            <li><i className="fa fa-envelope-o"></i>Email Us: <a
-                                                href="#">Support@Fiot.com</a></li>
+                                            <li><i className="fa fa-map-marker"></i>{this.props.address}</li>
+                                            <li><i className="fa fa-phone"></i>Call Us: {this.props.phone}</li>
+                                            <li><i className="fa fa-envelope-o"></i>Email Us: <a href={`mailto:${this.props.email}`}>{this.props.email}</a></li>
                                             <li><i className="fa fa-fax"></i>Fax: 123456</li>
                                         </ul>
                                     </div>
@@ -183,6 +180,9 @@ const mapStateToProps = (state, ownProps) => {
 		title: state.tenant.settings['shop.title'],
 		logo: state.tenant.settings['shop.logo'],
 		description: state.tenant.settings['shop.description'],
+		address: state.tenant.settings['shop.address'],
+		phone: state.tenant.settings['shop.phone'],
+		email: state.tenant.settings['shop.email'],
 		facebook: state.tenant.settings['shop.social.facebook'],
 		instagram: state.tenant.settings['shop.social.instagram'],
 		telegram: state.tenant.settings['shop.social.telegram'],
