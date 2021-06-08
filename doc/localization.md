@@ -11,3 +11,10 @@ Add class rtl in Body.
 Add sm-rtl class in vertical menu
 <!-- vertical menu -->
 <ul id="sub-menu" class="sm sm-rtl pixelstrap sm-vertical ">
+
+## Translate
+
+Following package is used as the basic translation tool:
+
+	react-redux-multilingual
+
