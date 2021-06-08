@@ -11,7 +11,7 @@ export function getTenantSettings(callback) {
 		},
 		{
 			key: 'shop.logo',
-			value: '/imgx/api/v2/cms/contents/logo/content'
+			value: '/api/v2/cms/contents/7087/content'
 		},
 		{
 			key: 'shop.phone',
@@ -47,10 +47,6 @@ export function getTenantSettings(callback) {
 		},
 		{
 			key: 'shop.social.youtube',
-			value: '#'
-		},
-		{
-			key: 'shop.social.aparat',
 			value: '#'
 		},
 		{
