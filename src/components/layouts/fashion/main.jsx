@@ -47,7 +47,7 @@ class Fashion extends Component {
 				<section className="p-0">
 					<Slider className="slide-1 home-slider">
 						{this.state.slides.map(slide => {
-							var slideStyle = { backgroundImage: `url(/imgx/${slide.image}?w=1920&h=718)` };
+							var slideStyle = { backgroundImage: `url(/imgx${slide.image}?w=1920&h=718)` };
 							return (
 								<div>
 									<div className="home home1 text-center" style={slideStyle}>
@@ -81,7 +81,7 @@ class Fashion extends Component {
 									<div className="col-md-6">
 										<Link to='/shop'>
 											<div className="collection-banner p-right text-center">
-												<img src={'/imgx/' + cat.thumbnail + '?w=642&h=310&f=cover'} className="img-fluid" alt={cat.name} />
+												<img src={'/imgx' + cat.thumbnail + '?w=642&h=310&f=cover'} className="img-fluid" alt={cat.name} />
 												<div className="contain-banner">
 													<div>
 														<h4>{cat.description}</h4>
