@@ -115,11 +115,11 @@ class NavBar extends Component {
 								</Link>
 							</li>
 							<li>
-								<Link 
-									to="/wb/blog" 
+								<a 
+									href="/wb/blog" 
 									className="nav-link">
 									{translate('blog')}
-								</Link>
+								</a>
 							</li>
 						</ul>
 					</div>
