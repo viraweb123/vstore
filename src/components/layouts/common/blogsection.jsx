@@ -19,7 +19,7 @@ class BlogSection extends Component {
 										<Link to={post.link} >
 											<div className="classic-effect">
 												<img
-													src={post.cover}
+													src={`/imgx${post.cover}?w=500&h=300&f=cover`}
 													className="img-fluid"
 													alt={post.title} />
 												<span></span>
