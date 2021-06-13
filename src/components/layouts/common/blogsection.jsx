@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import { Slider3 } from "../../../services/script"
 import { connect } from 'react-redux'
@@ -16,7 +16,7 @@ class BlogSection extends Component {
 							{posts.map(post => 
 								<div>
 									<div className="col-md-12">
-										<Link to={post.link} >
+										<a href={post.link} >
 											<div className="classic-effect">
 												<img
 													src={`/imgx${post.cover}?w=500&h=300&f=cover`}
@@ -24,13 +24,13 @@ class BlogSection extends Component {
 													alt={post.title} />
 												<span></span>
 											</div>
-										</Link>
+										</a>
 										<div className="blog-details">
 											<h4>{post.date}</h4>
-											<Link
-												to={post.link} >
+											<a
+												href={post.link} >
 												<p>{post.title}</p>
-											</Link>
+											</a>
 											<hr className="style1" />
 											<h6>By: {post.author}</h6>
 										</div>

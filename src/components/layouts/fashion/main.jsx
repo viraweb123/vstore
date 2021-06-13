@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import TopCollection from './top-collection';
 import SpecialProducts from "../common/products";
 import BlogSection from "../common/blogsection";
-import Instagram from "../common/instagram";
-import LogoBlock from "../common/logo-block";
 import {
 	svgFreeShipping,
 	svgservice,
@@ -158,6 +156,7 @@ class Fashion extends Component {
 						</div>
 					</section>
 				</div>
+				
 				{/*Blog Section end*/}
 				<div className="container">
 					<div className="row">
@@ -173,15 +172,6 @@ class Fashion extends Component {
 					<BlogSection />
 				</section>
 				{/*Blog Section End*/}
-
-				<Instagram />
-
-				{/*logo section*/}
-				<LogoBlock />
-				{/*logo section end*/}
-
-
-
 			</div>
 		)
 
