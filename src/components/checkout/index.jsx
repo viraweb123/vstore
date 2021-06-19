@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {Helmet} from 'react-helmet'
 import { connect } from 'react-redux'
-import {Link, Redirect } from 'react-router-dom'
+//import {
+//	Link, 
+//	Redirect 
+//} from 'react-router-dom'
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 import SimpleReactValidator from 'simple-react-validator';
 
