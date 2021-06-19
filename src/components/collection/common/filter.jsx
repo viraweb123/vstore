@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
-import { SlideToggle } from 'react-slide-toggle';
+import SlideToggle from 'react-slide-toggle';
 
 
 import { getBrands, getColors, getMinMaxPrice } from '../../../services';

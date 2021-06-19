@@ -50,7 +50,9 @@ function getPosts(callback, timeout) {
 }
 
 
-export default {
+const service = {
 	getPosts: getPosts
 };
+
+export default service;
 

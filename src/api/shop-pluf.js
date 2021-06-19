@@ -1,5 +1,5 @@
 
-import {toBoolean} from '../services/util'
+import { toBoolean } from '../services/util'
 
 //{
 //		"category": "women",
@@ -34,8 +34,8 @@ function getProductMetaField(product, key, namespace) {
 	}
 }
 
-function getFirstCategoryName(categories){
-	if((!categories || !Array.isArray(categories) || categories.length < 1)){
+function getFirstCategoryName(categories) {
+	if ((!categories || !Array.isArray(categories) || categories.length < 1)) {
 		return 'empty';
 	}
 	return categories[0].name;
@@ -51,7 +51,7 @@ export function aggregateObjectField(list, key) {
 	return result;
 }
 
-function metafieldToMap(product){
+function metafieldToMap(product) {
 	var metaMap = {};
 	product.metafields.forEach((meta) => {
 		metaMap[meta.key] = meta.value;
@@ -109,8 +109,9 @@ function buyProducts(payload, cb, timeout) {
 	return setTimeout(() => cb(), timeout || TIMEOUT);
 }
 
-export default {
+const Service = {
 	getProducts: getProducts,
 	buyProducts: buyProducts
 };
+export default Service;
 

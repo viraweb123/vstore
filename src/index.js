@@ -5,10 +5,13 @@ import {
 	BrowserRouter,
 	Route,
 	Switch,
-	useLocation
+//	useLocation
 } from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
-import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
+import { 
+//	IntlReducer as Intl, 
+	IntlProvider 
+} from 'react-redux-multilingual'
 import './index.scss';
 
 // API

@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
-	 withTranslate 
+	withTranslate
 } from 'react-redux-multilingual'
 
 // Custom Components
@@ -23,23 +23,21 @@ All footers:
 import Footer from "./common/footers/footer-one";
 
 // ThemeSettings
-import ThemeSettings from "./common/theme-settings"
+// import ThemeSettings from "./common/theme-settings"
 
 
 
 class App extends Component {
 
-    render() {
-        return (
-            <div>
-                <Header logoName={'logo.png'}/>
-                {this.props.children}
-                <Footer logoName={'logo.png'}/>
-
-                <ThemeSettings />
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div>
+				<Header logoName={'logo.png'} />
+				{this.props.children}
+				<Footer logoName={'logo.png'} />
+			</div>
+		);
+	}
 }
 
 /*
