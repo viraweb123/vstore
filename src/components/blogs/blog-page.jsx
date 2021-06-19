@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 class BlogPage extends Component {
 
-	constructor(props) {
-		super(props)
-	}
+//	constructor(props) {
+//		super(props)
+//	}
 
 	render() {
 
@@ -26,8 +26,10 @@ class BlogPage extends Component {
 										<ul className="recent-blog">
 											<li>
 												<div className="media">
-													<img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
-														alt="Generic placeholder image" />
+													<img 
+														className="img-fluid" 
+														src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`}
+														alt="Generic placeholder" />
 													<div className="media-body align-self-center">
 														<h6>25 Dec 2018</h6>
 														<p>0 hits</p>
@@ -36,8 +38,10 @@ class BlogPage extends Component {
 											</li>
 											<li>
 												<div className="media">
-													<img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
-														alt="Generic placeholder image" />
+													<img 
+														className="img-fluid" 
+														src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`}
+														alt="Generic placeholder" />
 													<div className="media-body align-self-center">
 														<h6>25 Dec 2018</h6>
 														<p>0 hits</p>
@@ -46,8 +50,10 @@ class BlogPage extends Component {
 											</li>
 											<li>
 												<div className="media">
-													<img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
-														alt="Generic placeholder image" />
+													<img 
+														className="img-fluid" 
+														src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`}
+														alt="Generic placeholder" />
 													<div className="media-body align-self-center">
 														<h6>25 Dec 2018</h6>
 														<p>0 hits</p>
@@ -56,8 +62,10 @@ class BlogPage extends Component {
 											</li>
 											<li>
 												<div className="media">
-													<img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
-														alt="Generic placeholder image" />
+													<img 
+														className="img-fluid" 
+														src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`}
+														alt="Generic placeholder" />
 													<div className="media-body align-self-center">
 														<h6>25 Dec 2018</h6>
 														<p>0 hits</p>
@@ -66,8 +74,10 @@ class BlogPage extends Component {
 											</li>
 											<li>
 												<div className="media">
-													<img className="img-fluid" src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`}
-														alt="Generic placeholder image" />
+													<img 
+														className="img-fluid" 
+														src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`}
+														alt="Generic placeholder" />
 													<div className="media-body align-self-center">
 														<h6>25 Dec 2018</h6>
 														<p>0 hits</p>
@@ -140,8 +150,8 @@ class BlogPage extends Component {
 								<div className="row blog-media">
 									<div className="col-xl-6">
 										<div className="blog-left">
-											<Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-												<img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
+											<Link to={`/blog/details`} >
+												<img src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
 											</Link>
 										</div>
 									</div>
@@ -149,7 +159,7 @@ class BlogPage extends Component {
 										<div className="blog-right">
 											<div>
 												<h6>25 January 2018</h6>
-												<Link to={`${process.env.PUBLIC_URL}/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
+												<Link to={`/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
                                                     and praising pain was born.</h4></Link>
 												<ul className="post-social">
 													<li>Posted By : Admin Admin</li>
@@ -257,4 +267,4 @@ class BlogPage extends Component {
 	}
 }
 
-export default BlogPage
+export default BlogPage;

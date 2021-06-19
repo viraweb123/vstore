@@ -3,9 +3,9 @@ import Breadcrumb from "../common/breadcrumb";
 
 class BlogDetails extends Component {
 
-	constructor(props) {
-		super(props)
-	}
+//	constructor(props) {
+//		super(props)
+//	}
 
 	render() {
 
@@ -20,7 +20,10 @@ class BlogDetails extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-sm-12 blog-detail">
-								<img src={`${process.env.PUBLIC_URL}/assets/images/about/about%20us.jpg`} className="img-fluid" alt="" />
+								<img 
+									className="img-fluid"
+									src={`/assets/images/about/about%20us.jpg`} 
+									alt="" />
 								<h3>Remaining essentially unchanged.</h3>
 								<ul className="post-social">
 									<li>25 January 2018</li>
@@ -67,7 +70,7 @@ class BlogDetails extends Component {
 						</div>
 						<div className="row section-b-space blog-advance">
 							<div className="col-lg-6">
-								<img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
+								<img src={`https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
 							</div>
 							<div className="col-lg-6">
 								<img src={`${process.env.PUBLIC_URL}https://dummyimage.com/1000x591/cccccc/0011ff.png`} className="img-fluid" alt="" />
@@ -116,7 +119,7 @@ class BlogDetails extends Component {
 								<ul className="comment-section">
 									<li>
 										<div className="media">
-											<img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="Generic placeholder image" />
+											<img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="Generic placeholder" />
 											<div className="media-body">
 												<h6>Mark Jecno <span>( 12 Jannuary 2018 at 1:30AM )</span></h6>
 												<p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est
@@ -133,7 +136,7 @@ class BlogDetails extends Component {
 									</li>
 									<li>
 										<div className="media">
-											<img src={`${process.env.PUBLIC_URL}/assets/images/2.jpg`} alt="Generic placeholder image" />
+											<img src={`${process.env.PUBLIC_URL}/assets/images/2.jpg`} alt="Generic placeholder" />
 											<div className="media-body">
 												<h6>Mark Jecno <span>( 12 Jannuary 2018 at 1:30AM )</span></h6>
 												<p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est
@@ -150,7 +153,7 @@ class BlogDetails extends Component {
 									</li>
 									<li>
 										<div className="media">
-											<img src={`${process.env.PUBLIC_URL}/assets/images/20.jpg`} alt="Generic placeholder image" />
+											<img src={`${process.env.PUBLIC_URL}/assets/images/20.jpg`} alt="Generic placeholder" />
 											<div className="media-body">
 												<h6>Mark Jecno <span>( 12 Jannuary 2018 at 1:30AM )</span></h6>
 												<p>Donec rhoncus massa quis nibh imperdiet dictum. Vestibulum id est

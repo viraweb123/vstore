@@ -44,3 +44,6 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const TENANT_SETTING_CREATE = 'TENANT_SETTING_CREATE';
 export const TENANT_SETTING_UPDATE = 'TENANT_SETTING_UPDATE';
 export const TENANT_SETTING_DELETE = 'TENANT_SETTING_DELETE';
+
+const _TestConstant = {};
+export default _TestConstant;

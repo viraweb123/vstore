@@ -5,10 +5,13 @@ import {
 	BrowserRouter,
 	Route,
 	Switch,
-	useLocation
+//	useLocation
 } from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
-import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
+import { 
+//	IntlReducer as Intl, 
+	IntlProvider 
+} from 'react-redux-multilingual'
 import './index.scss';
 
 // API
@@ -25,34 +28,9 @@ import {
 // import Landing from './components/landing'
 
 
-/*
-// Layouts 
-
-Default layouts path is './components/layouts/{name}/main'
-
-- beauty
-- common
-- electronic
-- fashion
-- furniture
-- kids
-- pets
-- vegetables
-- watch
-*/
-import home from './components/layouts/fashion/main';
-
-/**
-//Collection Pages
-
-default path ./components/collection/{name}
-
- */
-import shop from "./components/collection/collection-left-sidebar";
-
-
-// Product Pages
-import product from "./components/products/left-sidebar";
+import home from '@vstore-layouts/main'
+import shop from "@vstore-collection";
+import product from "@vstore-products";
 
 // Features
 import Layout from './components/app'

@@ -1,9 +1,9 @@
 // Get Unique Brands from Json Data
 export const getBrands = (products) => {
 	var uniqueBrands = [];
-	products.map((product, index) => {
+	products.forEach((product) => {
 		if (product.tags) {
-			product.tags.map((tag) => {
+			product.tags.forEach((tag) => {
 				if (uniqueBrands.indexOf(tag) === -1) {
 					uniqueBrands.push(tag);
 				}
@@ -17,9 +17,9 @@ export const getBrands = (products) => {
 // Get Unique Colors from Json Data
 export const getColors = (products) => {
 	var uniqueColors = [];
-	products.map((product, index) => {
+	products.forEach((product) => {
 		if (product.colors) {
-			product.colors.map((color) => {
+			product.colors.forEach((color) => {
 				if (uniqueColors.indexOf(color) === -1) {
 					uniqueColors.push(color);
 				}
@@ -34,7 +34,7 @@ export const getColors = (products) => {
 export const getMinMaxPrice = (products) => {
 	let min = 100, max = 1000;
 
-	products.map((product, index) => {
+	products.forEach((product) => {
 		let v = product.price;
 		min = (v < min) ? v : min;
 		max = (v > max) ? v : max;

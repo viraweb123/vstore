@@ -12,22 +12,23 @@ const defaultState = {
 };
 
 export default function tenantReducer(state = defaultState, action) {
-
+	var a;
 	switch (action.type) {
 		case TENANT_SETTING_UPDATE:
 		case TENANT_SETTING_CREATE:
-			var a = { ...state };
+			a = { ...state };
 			action.settings.forEach(setting => {
 				a.settings[setting.key] = setting.value;
 			});
-			return a;
+			break;
 		case TENANT_SETTING_DELETE:
-			var a = { ...state };
+			a = { ...state };
 			action.settings.forEach(setting => {
 				delete a.settings[setting.key];
 			});
-			return a;
+			break;
 		default:
 			return state;
 	}
+	return a;
 }
