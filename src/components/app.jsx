@@ -3,26 +3,8 @@ import {
 	withTranslate
 } from 'react-redux-multilingual'
 
-// Custom Components
-/**
-All Headers:
-
-- header-one
-- header-two
-- header-tree
- */
-import Header from './common/headers/header-one';
-
-/**
-All footers:
-
-- footer-one
-- footer-two
-- footer-three
- */
-import Footer from "./common/footers/footer-one";
-
-// ThemeSettings
+import Header from '@vstore-header';
+import Footer from '@vstore-footer';
 // import ThemeSettings from "./common/theme-settings"
 
 
