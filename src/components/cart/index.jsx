@@ -57,7 +57,7 @@ class cartComponent extends Component {
 																	: item.pictures[0]} alt="" />
 															</Link>
 														</td>
-														<td><Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>{item.name}</Link>
+														<td><Link to={`/product/${item.id}`}>{item.name}</Link>
 															<div className="mobile-cart-content row">
 																<div className="col-xs-3">
 																	<div className="qty-box">
@@ -87,7 +87,12 @@ class cartComponent extends Component {
 															<div className="qty-box">
 																<div className="input-group">
 																	<span className="input-group-prepend">
-																		<button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id)} data-type="minus" data-field="">
+																		<button 
+																			type="button" 
+																			className="btn quantity-left-minus" 
+																			onClick={() => this.props.decrementQty(item.id)} 
+																			data-type="minus" 
+																			data-field="">
 																			<i className="fa fa-angle-left"></i>
 																		</button>
 																	</span>
