@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { IntlActions } from 'react-redux-multilingual'
+//import { IntlActions } from 'react-redux-multilingual'
 import Pace from 'react-pace-progress'
 
 // Import custom components
-import store from '../../../store';
+//import store from '../../../store';
 import NavBar from "./common/navbar";
 import SideBar from "./common/sidebar";
 import CartContainer from "./../../../containers/CartContainer";
@@ -12,6 +12,8 @@ import { connect } from "react-redux";
 import TopBarDark from "./common/topbar-dark";
 import LogoImage from "./common/logo";
 
+// Import functions
+import { changeLanguage } from '../../../translations/utils';
 
 /**
 A hader with dark top toolbar.
@@ -51,9 +53,9 @@ class HeaderFive extends Component {
 		}
 	}
 
-	changeLanguage(lang) {
-		store.dispatch(IntlActions.setLocale(lang))
-	}
+	//	changeLanguage(lang) {
+	//		store.dispatch(IntlActions.setLocale(lang))
+	//	}
 
 	openNav() {
 		var openmyslide = document.getElementById("mySidenav");
@@ -120,8 +122,8 @@ class HeaderFive extends Component {
 														<div className="show-div setting">
 															<h6>language</h6>
 															<ul>
-																<li><a href={null} onClick={() => this.changeLanguage('en')}>English</a> </li>
-																<li><a href={null} onClick={() => this.changeLanguage('fn')}>French</a> </li>
+																<li><a href={null} onClick={() => changeLanguage('en')}>English</a> </li>
+																<li><a href={null} onClick={() => changeLanguage('fn')}>French</a> </li>
 															</ul>
 															<h6>currency</h6>
 															<ul className="list-inline">
@@ -177,7 +179,7 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,
-    { changeCurrency }
+	{ changeCurrency }
 )(HeaderFive);
 
 

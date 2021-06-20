@@ -59,7 +59,7 @@ class ThemeSettings extends Component {
 
 		event.target.classList.add('active');
 		console.log(color)
-		document.getElementById("color").setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/` + color + `.css`);
+		document.getElementById("color").setAttribute("href", `/assets/css/` + color + `.css`);
 	}
 
 	ChangeRtl(divName) {

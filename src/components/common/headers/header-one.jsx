@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 //import { Link, NavLink } from 'react-router-dom';
-import { IntlActions } from 'react-redux-multilingual'
 import Pace from 'react-pace-progress'
 
 // Import custom components
-import store from '../../../store';
 import NavBar from "./common/navbar";
 import SideBar from "./common/sidebar";
 import CartContainer from "./../../../containers/CartContainer";
 import TopBar from "./common/topbar";
 import LogoImage from "./common/logo";
 import { connect } from "react-redux";
+
+// Import functions
+import { changeLanguage } from '../../../translations';
 
 /**
 Default header used in the themplate
@@ -54,10 +55,6 @@ class HeaderOne extends Component {
 		} else {
 			document.getElementById("sticky").classList.remove('fixed');
 		}
-	}
-
-	changeLanguage(lang) {
-		store.dispatch(IntlActions.setLocale(lang))
 	}
 
 	openNav() {
@@ -130,6 +127,21 @@ class HeaderOne extends Component {
 																className="img-fluid"
 																alt="" />
 															<i className="fa fa-search" onClick={this.openSearch}></i>
+														</div>
+													</li>
+													<li className="onhover-div mobile-setting">
+														<div>
+															<img src={`/assets/images/icon/setting.png`} 
+															className="img-fluid" 
+															alt="" />
+															<i className="fa fa-cog"></i>
+														</div>
+														<div className="show-div setting">
+															<h6>language</h6>
+															<ul>
+																<li><a href={null} onClick={() => changeLanguage('en')}>English</a> </li>
+																<li><a href={null} onClick={() => changeLanguage('fn')}>French</a> </li>
+															</ul>
 														</div>
 													</li>
 													{/*Header Cart Component */}

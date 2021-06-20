@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet'
 import '../../common/index.scss';
 import Slider from 'react-slick';
 
@@ -23,10 +22,6 @@ class Electronic extends Component {
 
 		return (
 			<div className="container-fluid layout-8">
-				<Helmet>
-					<title>MultiKart | Electronic Store</title>
-				</Helmet>
-
 				<section className="p-0 padding-bottom-cls">
 					<Slider className="slide-1 home-slider">
 						<div>

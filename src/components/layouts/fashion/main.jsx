@@ -37,10 +37,6 @@ class Fashion extends Component {
 		
 		return (
 			<div>
-				<Helmet>
-					<title>{process.env.REACT_APP_TITLE}</title>
-					<meta name="description" content="Multikart – Multipurpose eCommerce React Template is a multi-use React template. It is designed to go well with multi-purpose websites. Multikart Bootstrap 4 Template will help you run multiple businesses." />
-				</Helmet>
 				{/*Home Slider*/}
 				<section className="p-0">
 					<Slider className="slide-1 home-slider">

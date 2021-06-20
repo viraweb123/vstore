@@ -5,13 +5,15 @@ import {
 	BrowserRouter,
 	Route,
 	Switch,
-//	useLocation
+	//	useLocation
 } from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
-import { 
-//	IntlReducer as Intl, 
-	IntlProvider 
+import {
+	//	IntlReducer as Intl, 
+	IntlActions,
+	IntlProvider
 } from 'react-redux-multilingual'
+
 import './index.scss';
 
 // API
@@ -19,7 +21,6 @@ import { getTenantSettings } from './api/tenant';
 
 // Import custom components
 import store from './store';
-import translations from './constants/translations'
 import {
 	getAllProducts,
 	loadTenantSettings,
@@ -31,6 +32,7 @@ import {
 import home from '@vstore-layouts/main'
 import shop from "@vstore-collection";
 import product from "@vstore-products";
+import translations from '@vstore-translation';
 
 // Features
 import Layout from './components/app'
@@ -59,9 +61,19 @@ import Details from './components/blogs/details'
 import BlogPage from './components/blogs/blog-page'
 
 
+import { Helmet } from 'react-helmet'
 
 class Root extends React.Component {
 
+	ChangeRtl(divName) {
+		if (divName === 'RTL') {
+			document.body.classList.add('rtl');
+		} else {
+			document.body.classList.remove('rtl');
+		}
+	}
+
+	
 	render() {
 		// Load base href
 		var bases = document.getElementsByTagName('base');
@@ -86,11 +98,21 @@ class Root extends React.Component {
 		setTimeout(function() {
 			document.querySelector(".loader-wrapper").style = "display: none";
 		}, 2000);
+		
+		this.ChangeRtl(process.env.REACT_APP_DIRECTION);
 
-
+		var local = process.env.REACT_APP_LOCALE || 'en';
+		store.dispatch(IntlActions.setLocale(local));
 		return (
 			<Provider store={store}>
-				<IntlProvider translations={translations} locale='en'>
+				<Helmet>
+					<title>{process.env.REACT_APP_TITLE}</title>
+					<title>{process.env.REACT_APP_TITLE}</title>
+					<meta name="description" content={process.env.REACT_APP_DESCRIPTION} />
+				</Helmet>
+				<IntlProvider 
+					translations={translations} 
+					locale={local}>
 					<BrowserRouter basename={baseHref} >
 						<ScrollContext>
 							<Switch>

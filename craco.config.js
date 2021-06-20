@@ -22,6 +22,8 @@ module.exports = {
 			
 			'@vstore-header': path.resolve(__dirname, "src/components/common/headers/" + env.REACT_APP_THEME_HEADER),
 			'@vstore-footer': path.resolve(__dirname, "src/components/common/footers/" + env.REACT_APP_THEME_FOOTER),
+			
+			'@vstore-translation': path.resolve(__dirname, "src/translations/" + env.REACT_APP_TRANSLATION),
 		}
 	}
 }

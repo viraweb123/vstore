@@ -44,12 +44,12 @@ class TopBar extends Component {
 									<ul className="onhover-show-div">
 										<li>
 											<Link to={`/pages/login`} data-lng="en">
-												{translate('Login')}
+												{translate('login')}
 											</Link>
 										</li>
 										<li>
 											<Link to={`/pages/register`} data-lng="en">
-												{translate('Register')}
+												{translate('register')}
 											</Link>
 										</li>
 									</ul>
